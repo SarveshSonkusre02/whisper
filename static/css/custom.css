@@ -1,0 +1,104 @@
+/* Custom styles to enhance the Bootstrap theme */
+
+/* Add some transition effects */
+.card {
+    transition: all 0.3s ease;
+}
+
+.btn {
+    transition: all 0.2s ease;
+}
+
+/* Style the transcription text area */
+.transcription-content {
+    min-height: 150px;
+    max-height: 500px;
+    overflow-y: auto;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    font-size: 1.1rem;
+}
+
+/* Custom styling for the file input */
+input[type="file"] {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Enhance focus states */
+.form-control:focus, 
+.btn:focus {
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+/* Make sure that long words don't overflow */
+body {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Style for the progress bar container */
+#progressContainer {
+    transition: opacity 0.3s ease;
+}
+
+/* Styles for the audio recording section */
+.record-button-wrapper {
+    background-color: rgba(220, 53, 69, 0.1);
+    transition: all 0.3s ease;
+}
+
+.record-button-wrapper:hover {
+    background-color: rgba(220, 53, 69, 0.2);
+}
+
+#recordButton {
+    box-shadow: 0 0 0 5px rgba(220, 53, 69, 0.2);
+    transition: all 0.3s ease, transform 0.1s ease;
+}
+
+#recordButton:hover {
+    transform: scale(1.05);
+}
+
+#recordButton:active {
+    transform: scale(0.95);
+}
+
+#recordButton.recording {
+    animation: pulse 1.5s infinite;
+}
+
+#recordingTime {
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: var(--bs-danger);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+    }
+}
+
+/* Mobile responsiveness enhancements */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    #copyBtn, #downloadBtn {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.875rem;
+    }
+}
